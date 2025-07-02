@@ -22,6 +22,10 @@ def init_excel():
         ws.append(["Name", "Email"])
         wb.save(EXCEL_FILE)
 
+@app.route('/')
+def home():
+    return "Welcome! Your Shopify Flask app is deployed and running."
+
 @app.route('/api/register', methods=['POST', 'OPTIONS'])
 def register():
     # Handle preflight CORS request
